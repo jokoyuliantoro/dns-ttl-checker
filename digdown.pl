@@ -62,6 +62,8 @@ while (<>) {
         }
       }
       close G;
+      $ttl = "nottl" if $ttl eq "";
+      $ips = "noanswer" if $ips eq "";
       print "$dom $ttl $ips\n";
     } else {
       print "$dom nottl noanswer\n";
