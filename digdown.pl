@@ -29,7 +29,7 @@ while (<>) {
     }
     $ns = "";
     $nsip = "";
-    $dom = $_ if $dl == 2;
+    $dom = $dcheck if $dl == 2;
     open F, "dig $dom ns | ";
     while (<F>) {
       if (/IN\s+NS\s+(\S+)/) {
