@@ -54,7 +54,7 @@ while (<>) {
       $ips = "";
       $ttl = "";
       while (<G>) {
-        if (/\s+([0-9]+)\s+IN\s+\S+\s+(\S+)/) {
+        if (/\s+([0-9]+)\s+IN\s+A+\s+(\S+)/) {
           $ttl .= "," if $ttl ne "";
           $ttl .= "$1";
           $ips .= "," if $ips ne "";
